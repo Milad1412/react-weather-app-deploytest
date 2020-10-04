@@ -4,13 +4,13 @@
   align-items: center;
 }
 
-.location h1 {
+/* .location h1 {
   margin-right: 20px;
-}
+} */
 
-.location img {
+/* .location img {
   margin-left: 20px;
-}
+} */
 
 .search {
   display: flex;
