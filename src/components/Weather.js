@@ -12,8 +12,12 @@ class Weather extends Component {
   };
 
   componentDidMount = () => {
+    
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
+        this.setState({
+          cityToDisplay: "Loading..."
+        });
         const lon = position.coords.longitude;
         const lat = position.coords.latitude;
 
@@ -39,6 +43,12 @@ class Weather extends Component {
             });
           });
       });
+    }
+
+    else {
+      this.setState({
+        cityToDisplay: "Accessing Location Refused"
+      })
     }
   };
 
